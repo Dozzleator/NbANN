@@ -12,7 +12,7 @@ def initialise_parameters(layers: list) -> dict:
     # Loop from 1-layer until the end of the amount of layers
     for i in range(1, layers_dim):
 
-        # Create input and output for each node
+        # Create input aßßnd output for each node
         input_nodes = layers[i-1]
         output_nodes = layers[i]
 
@@ -29,4 +29,4 @@ def initialise_parameters(layers: list) -> dict:
         parameters['W' + str(i)] = weight
         parameters['b' + str(i)] = bias
 
-    return parameters
+    return parameters, output_nodes
