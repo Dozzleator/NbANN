@@ -1,16 +1,32 @@
 import numpy as np
 
-def input_layer(data: np.ndarray, hidden_size: int) -> np.ndarray:
+def initialise_parameters(layers: list) -> dict:
     '''Takes in the data and passes an array of x(w, b) to the first layer'''
 
-    # Find amount of features (nodes needed from data shape)
-    num_features = data.shape[0]
+    # Store nodes(weights/ bias) into dict to be referenced in backproporgation
+    parameters = {}
 
-    # Create weights and biases for data
-    weight = np.random.randn(hidden_size, num_features)
-    bias = np.zeros(hidden_size, 1)
+    # Create a variable to identify hoe many layers there should be
+    layers_dim = len(layers)
 
-    # Map data back in linear distribution
-    nn_data = np.dot(weight, data) + bias
+    # Loop from 1-layer until the end of the amount of layers
+    for i in range(1, layers_dim):
 
-    return nn_data
+        # Create input and output for each node
+        input_nodes = layers[i-1]
+        output_nodes = layers[i]
+
+        # To ensure randomnes among layers we enforce standard deviation to the model
+        std_dev = np.sqrt(2 / input_nodes)
+
+        # Create weights and biases for data
+        weight = np.random.randn(output_nodes, input_nodes) * std_dev
+    
+        # Initilise with a bias array of zeros
+        bias = np.zeros((output_nodes, 1))
+
+        # Store the weights and bias into dictionary 
+        parameters['W' + str(i)] = weight
+        parameters['b' + str(i)] = bias
+
+    return parameters
