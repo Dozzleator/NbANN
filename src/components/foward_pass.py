@@ -43,4 +43,4 @@ def foward_pass(data: np.ndarray, parameters: dict, activation_function:str = No
         # Save output layer to cache
         cache['A' + str(i)] = activation_array
 
-    return activation_array, cache
+    return activation_array, cache, num_layers
