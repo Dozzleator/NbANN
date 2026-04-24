@@ -1,0 +1,14 @@
+[build-system]
+requires = ['setuptools>=61.0']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'mlp'
+version = '0.1.0'
+description = 'Custom Nueral Network built in python strictly using only the Numpy library'
+authors = [
+    {name = 'Joseph Whakaari', email = 'jwhakaari@gmail.com'}
+]
+dependencies = [
+    'numpy>=1.20.0',
+]

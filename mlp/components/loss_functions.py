@@ -1,16 +1,5 @@
 import numpy as np
 
-def create_loss_var(data: np.ndarray, output_nodes: np.ndarray) -> np.ndarray:
-    '''Create a "true" y to compare with prediction from foward prop'''
-
-    # find amount of samples 
-    num_samples = data.shape[1]
-
-    # select from foward pass * num samples
-    y_true = np.random.rand(output_nodes, num_samples)
-
-    return y_true, num_samples
-
 def MSE(y_pred: np.ndarray, y_true:np.ndarray, total_samples: int)-> float:
     '''Mean Squared Error (MSE) loss function to determine loss for regression'''
 
