@@ -4,7 +4,7 @@
 NbANN is a lightweight, custom-built Multi-Layer Perceptron (MLP) neural network library. Developed entirely from scratch using only Python and NumPy. The library features a clean, Scikit-Learn style API (.fit(), .predict(), .accuracy()), making it an excellent tool for deep learning education, algorithmic transparency, and rapid prototyping.
 
 ## Dependencies
-This project is built with a "Zero Magic" philosophy, relying on minimal external packages.
+This project is built to rely on minimal external packages.
 * Python 
 * numpy
 * setuptools 
