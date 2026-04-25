@@ -15,9 +15,11 @@ This project uses a modern `pyproject.toml` build system. To install the package
 ```bash
 pip install -e .
 ```
+
 ## File Structure
 The project is cleanly modularised into specific mathematical components to ensure readability and easy maintenance:
 
+```bash
 nba_project/
 │
 ├── pyproject.toml       
@@ -31,6 +33,14 @@ nba_project/
         ├── loss_functions.py   
         ├── back_propagation.py 
         └── optimiser.py       
+```
+
+## Extra
+Although the code is open source and available for free distribution it has also been uploaded to PyPI for easy installation through pip.
+
+```bash
+pip install NbANN
+```
 
 ## Author
 - Name: Joseph Whakaari
