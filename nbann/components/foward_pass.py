@@ -1,7 +1,7 @@
 import numpy as np
 
 # Import activation functions 
-from components.activation_functions import *
+from .activation_functions import *
 
 def foward_pass(data: np.ndarray, parameters: dict, activation_function:str = None) -> tuple[np.ndarray, dict]:
     '''Retrives the weights (stored in dict) and passes the data through'''

@@ -1,7 +1,7 @@
 import numpy as np
 
 # Import derivitives of activation functions
-from components.activation_functions import ReLU_derivative, sigmond_derivative, GELU_derivative
+from .activation_functions import ReLU_derivative, sigmond_derivative, GELU_derivative
 
 def back_propergation(
         y_pred: np.ndarray, 

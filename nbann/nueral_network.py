@@ -2,13 +2,13 @@
 import numpy as np
 
 # Call nueral network functions (Check related files to see scripts for each step)
-from components.build_layers import initialise_parameters
-from components.foward_pass import foward_pass
-from components.loss_functions import find_loss, create_loss_var
-from components.back_propergation import back_propergation
-from components.optimiser import optimise_parameters
+from .components.build_layers import initialise_parameters
+from .components.foward_pass import foward_pass
+from .components.loss_functions import find_loss
+from .components.back_propergation import back_propergation
+from .components.optimiser import optimise_parameters
 
-class NueralNetwork:
+class NeuralNetwork:
 
     def __init__(self, layers: list, activation_function: str, learning_rate: float, max_iter: int, task_type: bool):
         '''Initialise the Nueral Network with specific hyperparameters'''
